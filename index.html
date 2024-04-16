@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hidden Messages in Images</h1>
+        <input type="file" id="imageLoader" name="imageLoader" accept="image/*" />
+        <input type="text" id="messageInput" placeholder="Enter your message (max 100 characters)" maxlength="100">
+        <button onclick="encodeMessage()">Encode Message</button>
+        <button onclick="decodeMessage()">Decode Message</button>
+        <canvas id="imageCanvas" style="display:none;"></canvas>
+        <button id="downloadBtn" style="display:none;">Download Encoded Image</button>
+        <p class="instructions">
+            <strong>Instructions:</strong> <br>
+            - To encode a message: Choose an image file, enter your message, and click "Encode Message". Then click "Download Encoded Image" to save your file.<br>
+            - To decode a message: Load an image that has been encoded using this tool and click "Decode Message".<br>
+            <strong>Note:</strong> All processing is done on your device; no data is uploaded or saved on our servers.
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
